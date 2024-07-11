@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="d3.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>       
+              
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Dashboard</title>
+    <style>
+       .tooltip {
+          position: absolute;
+          text-align: center;
+          width: 120px;
+          height: auto;
+          padding: 5px;
+          font: 12px sans-serif;
+          background: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          border-radius: 5px;
+          pointer-events: none;
+          opacity: 0;
+        }
+        .arc:hover {
+          opacity: 1;
+        }
+        /* Add some basic styling */
+        #navlist { 
+			background-color: #0074D9; 
+			position: absolute; 
+			width: 90%; 
+		} 
+		
+		/* styling navlist anchor element */ 
+		#navlist a { 
+			float:left; 
+			display: block; 
+			color: #f2f2f2; 
+			text-align: center; 
+			padding: 15px; 
+			text-decoration: none; 
+			font-size: 15px; 
+		} 
+		
+		 
+
+		/* hover effect of navlist anchor element */ 
+		#navlist a:hover { 
+			background-color: #ddd; 
+			color: black; 
+		} 
+
+        .chart {
+            margin: 20px ;
+            padding: 40px;
+            background-color: #4e6c9c; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        .scatter-plot {
+        background-color: #201f1f3a;
+    }
+    .bar {
+            fill-opacity: 0.7;
+        }
+        .bar:hover {
+            fill-opacity: 1;
+        }
+        .axis-label {
+            font-size: 12px;
+            fill: #000;
+        }
+        .legend {
+            font-size: 12px;
+        }
+        .legend rect {
+            stroke-width: 2;
+        }
+        .legend text {
+            margin-left: 5px;
+        }
+        .covid{
+            padding-left: 100px;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+  <h1 style="padding-left: 400px;">DASHBBOARD</h1>
+        
+  <div id="navlist"> 
+    <a href="#scatter-plot">Scatter</a> 
+    <a href="#bar-chart"> Vertical </a> 
+    <a href="#horizontal-bar-chart"> Horizontal </a> 
+    <a href="#pie-chart"> Pie </a> 
+    <a href="#coxcomb-plot"> Coxcomb </a> 
+    <a href="#line-chart"> Mult Line </a> 
+    
+</div> 
+    <div id="scatter-plot" class="chart">
+       
+        <h1 class="covid" style="color:rgb(225, 225, 236);"> Relationship between Literacy and Poverty</h1>
+        <select id="geographicChoice" input="dropdown">
+          <option value="allProv">all States</option>
+          <option value="Balochistan">State A</option>
+          <option value="Federal Capital Territory">State B</option>
+          
+          <option value="Khyber Pakhtunkhwa">State C</option>
+          <option value="Punjab">State D</option>
+          <option value="Sindh">State E</option>
+        </select>
+        <div id="my_dataviz"></div>
+      </div>
+    
+    
+    <div id="bar-chart" class="chart">
+        <h1 class="covid" style="color:rgb(225, 225, 236);"> Popular Players in different sport</h1>
+    </div>
+    <div id="horizontal-bar-chart" class="chart">
+        <h1 class="covid" style="color:rgb(225, 225, 236);"> Top 20 countries  COVID-19 cases</h1>
+    </div>
+    
+    
+    <div id="pie-chart" class="chart">
+        <h1 style="color:rgb(225, 225, 236);">Top Six Muslim Countries Population</h1>
+    </div>
+    <div id="coxcomb-plot" class="chart">
+        <h1 style="color:rgb(225, 225, 236);">
+         Population of different Religions</h1>
+    </div>
+    <div id="line-chart" class="chart">
+        <h1 class="covid" style="color:rgb(225, 225, 236);">
+            Multi-line Chart of 4 Largest Cities in the US in 2021
+        </h1>
+    </div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    
+    
+    <script src="piechart.js"></script>
+    <script src="horizontalbar.js"></script>
+    <script src="verticalbar.js"></script>
+    <script src="coxcomb.js"></script>
+    <script src="scatterplot.js"></script>
+    <script src="newline.js"></script>
+   
+    
+</body>
+
+</html>

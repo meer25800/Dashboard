@@ -1,0 +1,11 @@
+Country,PovertyRate,UnemploymentRate,LifeExpectancy,EducationIndex
+Country1,65,25,50,0.35
+Country2,62,27,52,0.40
+Country3,68,30,48,0.30
+Country4,70,22,47,0.28
+Country5,63,20,53,0.38
+Country6,66,23,51,0.34
+Country7,61,21,54,0.36
+Country8,64,28,49,0.33
+Country9,69,26,46,0.29
+Country10,67,24,45,0.32
